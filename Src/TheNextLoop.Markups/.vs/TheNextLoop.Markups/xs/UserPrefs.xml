@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{22DB7131-D18B-43F9-A79F-A23687A1E2F0}|Default">
+  <MonoDevelop.Ide.ItemProperties.TheNextLoop.Markups FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TheNextLoop.Markups/Enums/eScreenSizes.cs">
+    <Files>
+      <File FileName="TheNextLoop.Markups/Markups/OnScreenSizeExtension.cs" Line="158" Column="27" />
+      <File FileName="TheNextLoop.Markups/Enums/eScreenSizes.cs" Line="31" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TheNextLoop.Markups" expanded="True">
+            <Node name="TheNextLoop.Markups" expanded="True">
+              <Node name="Enums" expanded="True">
+                <Node name="eScreenSizes.cs" selected="True" />
+              </Node>
+              <Node name="Markups" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TheNextLoop.Markups.Android FirstBuild="True" PreferredExecutionTarget="Android.galaxy_nexus_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TheNextLoop.Markups.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

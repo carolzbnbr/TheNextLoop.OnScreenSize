@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:markups="clr-namespace:TheNextLoop.Markups;assembly=TheNextLoop.Markups"
+             x:Class="OnScreenSize.Samples.MainPage" Padding="0, 20, 0, 0" >
+
+    <Grid Margin="8, 0, 8, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{markups:OnScreenSize DefaultSize='60', ExtraSmall='7', Small='8', Medium='60', Large='10', ExtraLarge='13'}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+            <Label Text="List of Animals" Grid.Row="0" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Body" VerticalOptions="CenterAndExpand"/>
+          
+            <CollectionView   Grid.Row="1" 
+                              ItemsSource="{Binding Animals}" 
+                              IsGrouped="true">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="{markups:OnScreenSize DefaultSize='Auto', Medium='30', ExtraLarge='Auto'}" />
+                                <RowDefinition Height="{markups:OnScreenSize DefaultSize='Auto', Medium='30', ExtraLarge='Auto'}" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding ImageUrl}" 
+                                   Aspect="AspectFill"
+                                   HeightRequest="{markups:OnScreenSize DefaultSize='30', Medium='60', ExtraLarge='120'}" 
+                                   WidthRequest="{markups:OnScreenSize DefaultSize='30', Medium='60', ExtraLarge='120'}" />
+
+                            <Label Grid.Column="1"
+                                   FontSize="{markups:OnScreenSize DefaultSize='12',  Medium='20',  ExtraLarge='40'}"
+                                   Text="{Binding Name}" 
+                                   FontAttributes="Bold" />
+
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                    FontSize="{markups:OnScreenSize DefaultSize='9' , Medium='18', ExtraLarge='35'}"
+                                   Text="{Binding Location}"
+                                   FontAttributes="Italic" 
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.GroupHeaderTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Name}"
+                                FontSize="{markups:OnScreenSize DefaultSize='20' , Medium='Large',  ExtraLarge='45'}"
+                               BackgroundColor="LightGray"
+                               FontAttributes="Bold" />
+                    </DataTemplate>
+                </CollectionView.GroupHeaderTemplate>
+                <CollectionView.GroupFooterTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Count, StringFormat='Total animals: {0:D}'}"
+                               FontSize="{markups:OnScreenSize DefaultSize='12' , Medium='15', Large='10', ExtraLarge='30'}"
+                               FontAttributes="Bold"
+                               Margin="0,0,0,10" />
+                    </DataTemplate>
+                </CollectionView.GroupFooterTemplate>
+            </CollectionView>
+    </Grid>
+ 
+</ContentPage>
