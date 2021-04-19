@@ -61,7 +61,7 @@ namespace TheNextLoop.Markups.Extensions
             }
 
 
-            returnValue = Convert.ChangeType(value, toType);
+            returnValue = Convert.ChangeType(value, toType, CultureInfo.InvariantCulture);
             return returnValue;
         }
 
